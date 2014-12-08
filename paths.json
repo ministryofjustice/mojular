@@ -1,0 +1,8 @@
+{
+	"import_paths": [
+    "moj-template/assets/scss",
+    "bourbon/dist",
+    "susy/sass",
+    "compass-breakpoint/stylesheets"
+  ]
+}

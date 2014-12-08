@@ -1,0 +1,22 @@
+{
+  "name": "moj-styles",
+  "version": "0.0.0",
+  "authors": [
+    "Tyom Semonov <inspiro@gmail.com>"
+  ],
+  "main": ["assets/css/moj.css"],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.0.2",
+    "susy": "~2.1.3",
+    "compass-breakpoint": "~2.5.0"
+  }
+}
