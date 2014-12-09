@@ -1,9 +1,5 @@
 {
   "import_paths": [
-    "moj-template/assets/scss",
-    "govuk-template/assets/scss",
-    "bourbon/dist",
-    "susy/sass",
-    "compass-breakpoint/stylesheets"
+    "moj-template/assets/scss"
   ]
 }
