@@ -4,7 +4,9 @@
   "authors": [
     "Tyom Semonov <inspiro@gmail.com>"
   ],
-  "main": ["assets/css/moj.css"],
+  "main": [
+    "assets/css/moj.css"
+  ],
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -17,6 +19,7 @@
   "dependencies": {
     "bourbon": "~4.0.2",
     "susy": "~2.1.3",
-    "compass-breakpoint": "~2.5.0"
+    "compass-breakpoint": "~2.5.0",
+    "jquery": "1.11.1"
   }
 }
