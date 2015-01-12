@@ -1,0 +1,16 @@
+doctype html
+html lang="en"
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="content-type"
+    title #{(defined? yield_content) ? yield_content(:page_title) : yield(:page_title)} (Slim)
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+  body
+    .masthead
+      .container
+        h1 GOV.UK
+    .container
+      = yield
+    .mastfoot
+      .container
+    = javascript_include_tag 'javascripts/moj', 'application'

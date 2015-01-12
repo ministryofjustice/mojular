@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title><%= (defined? yield_content) ? yield_content(:page_title) : yield(:page_title) %> (ERB)</title>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="masthead">
+        <div class="container">
+            <h1>GOV.UK</h1>
+        </div>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="mastfoot">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <%= javascript_include_tag 'javascripts/moj', 'application' %>
+  </body>
+</html>

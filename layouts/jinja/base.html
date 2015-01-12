@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>{% block page_title %}{% endblock %}</title>
+
+    {% block stylesheets %}{% endblock %}
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <div class="masthead">
+        <div class="container">
+            <h1>GOV.UK</h1>
+        </div>
+    </div>
+
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+
+    <div class="mastfoot">
+        <div class="container">
+
+        </div>
+    </div>
+
+    {% block javascripts %}
+      <script src="{{ static('js/moj.js') }}"></script>
+      <script src="{{ static('js/application.js') }}"></script>
+    {% endblock javascripts %}
+  </body>
+</html>
