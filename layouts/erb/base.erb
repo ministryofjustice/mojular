@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title><%= (defined? yield_content) ? yield_content(:page_title) : yield(:page_title) %> (ERB)</title>
@@ -7,22 +7,83 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="masthead">
+    <div class="global-header">
         <div class="container">
-            <h1>GOV.UK</h1>
+          <div class="skip-link">
+            <a href="#content">Skip to main content</a>
+          </div>
+          <div class="header-branding">
+            <a href="https://gov.uk" title="Go to the GOV.UK homepage" class="header-logo">
+              <span>GOV.UK</span>
+            </a>
+          </div>
+          <% if content_for? :proposition %>
+            <a href="#proposition-links" class="header-menu-toggle"></a>
+            <div class="header-proposition">
+              <% if defined? yield_content %>
+                <%= yield_content :proposition %>
+              <% else %>
+                <%= yield :proposition %>
+              <% end %>
+            </div>
+          <% end %>
+          <div class="header-bar"></div>
         </div>
     </div>
 
-    <div class="container">
-      <%= yield %>
+    <div class="main-content" role="main">
+      <div class="container">
+        <% if content_for? :global_subheader %>
+          <div class="global-subheader">
+            <% if defined? yield_content %>
+              <%= yield_content :global_subheader %>
+            <% else %>
+              <%= yield :global_subheader %>
+            <% end %>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </div>
     </div>
 
-    <div class="mastfoot">
-        <div class="container">
-
+    <div class="global-footer">
+      <div class="container">
+        <div class="support-links">
+          <h2 class="u-vh">Support links</h2>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li>
+              Built by
+              <a href="https://mojdigital.blog.gov.uk/">
+                <abbr title="Ministry of Justice">MOJ</abbr> Digital Services
+              </a>
+            </li>
+          </ul>
+          <div class="open-government-licence">
+            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="ogl-logo">
+              Open Government Licence
+            </a>
+            All content is available under the
+            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>
+            except where otherwise stated
+          </div>
         </div>
+        <div class="copyright">
+          <a href="https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown copyright</a>
+        </div>
+      </div>
     </div>
 
-    <%= javascript_include_tag 'javascripts/moj', 'application' %>
+    <%= javascript_include_tag 'jquery/dist/jquery', 'javascripts/moj' %>
+    <% if content_for? :include_js %>
+      <% if defined? :yield_content %>
+        <%= javascript_include_tag(yield_content :include_js) %>
+      <% else %>
+        <%= javascript_include_tag(yield :include_js) %>
+      <% end %>
+    <% end %>
   </body>
 </html>

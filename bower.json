@@ -1,11 +1,8 @@
 {
-  "name": "moj-styles",
+  "name": "mojular",
   "version": "0.0.0",
   "authors": [
     "Tyom Semonov <inspiro@gmail.com>"
-  ],
-  "main": [
-    "assets/css/moj.css"
   ],
   "license": "MIT",
   "private": true,
