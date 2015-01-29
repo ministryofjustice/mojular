@@ -14,6 +14,6 @@
     "tests"
   ],
   "dependencies": {
-    "govuk-template": "file:///Users/tyom/Dropbox/Code/MoJ/moj-bower/govuk-template/.git"
+    "govuk-template": "ministryofjustice/govuk-template"
   }
 }
