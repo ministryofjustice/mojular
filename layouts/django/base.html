@@ -1,33 +1,73 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>{% block page_title %}{% endblock %}</title>
-
+    <title>{% block page_title %}{% endblock %} (Django)</title>
     {% block stylesheets %}{% endblock %}
     {% block head %}{% endblock %}
   </head>
   <body>
-    <div class="masthead">
+    <div class="global-header">
         <div class="container">
-            <h1>GOV.UK</h1>
+          <div class="skip-link">
+            <a href="#content">Skip to main content</a>
+          </div>
+          <div class="header-branding">
+            <a href="https://gov.uk" title="Go to the GOV.UK homepage" class="header-logo">
+              <span>GOV.UK</span>
+            </a>
+          </div>
+          <a href="#proposition-links" class="header-menu-toggle"></a>
+          <div class="header-proposition">
+            {% block proposition %}{% endblock %}
+          </div>
+          <div class="header-bar"></div>
         </div>
     </div>
 
-    <div class="container">
-      {% block content %}{% endblock %}
-    </div>
-
-    <div class="mastfoot">
-        <div class="container">
-
+    <div class="main-content" role="main">
+      <div class="container">
+        <div class="global-subheader">
+          {% block global_subheader %}{% endblock %}
         </div>
+
+        {% block content %}{% endblock %}
+      </div>
     </div>
 
-    {% block javascripts %}
-      <script src="{% static 'javascripts/moj.js' %}"></script>
-      <script src="{% static 'javascripts/application.js' %}"></script>
-    {% endblock javascripts %}
+    <div class="global-footer">
+      <div class="container">
+        <div class="support-links">
+          <h2 class="u-vh">Support links</h2>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li>
+              Built by
+              <a href="https://mojdigital.blog.gov.uk/">
+                <abbr title="Ministry of Justice">MOJ</abbr> Digital Services
+              </a>
+            </li>
+          </ul>
+          <div class="open-government-licence">
+            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="ogl-logo">
+              Open Government Licence
+            </a>
+            All content is available under the
+            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>
+            except where otherwise stated
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown copyright</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'javascripts/moj.js' %}"></script>
+    {% block include_js %}{% endblock %}
   </body>
 </html>
