@@ -79,7 +79,7 @@
 
     <%= javascript_include_tag 'jquery/dist/jquery', 'javascripts/moj' %>
     <% if content_for? :include_js %>
-      <% if defined? :yield_content %>
+      <% if defined? yield_content %>
         <%= javascript_include_tag(yield_content :include_js) %>
       <% else %>
         <%= javascript_include_tag(yield :include_js) %>
