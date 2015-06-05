@@ -1,0 +1,14 @@
+<% phase = phase || nil %>
+
+<div class="global-subheader container">
+  <div class="subheader-item phase-banner">
+    <% if phase and phase.is_a? String %>
+      <span class="phase-tag phase-tag-<%= phase.downcase %>">
+        <%= phase.upcase %>
+      </span>
+    <% end %>
+    <span class="phase-banner-message">
+      This is a new service – your <a href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </div>
+</div>

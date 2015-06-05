@@ -1,29 +1,28 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>{% block page_title %}{% endblock %} (Django)</title>
+    <title>{% block page_title %}{% endblock %} (Jinja)</title>
     {% block stylesheets %}{% endblock %}
     {% block head %}{% endblock %}
   </head>
   <body>
     <div class="global-header">
-        <div class="container">
-          <div class="skip-link">
-            <a href="#content">Skip to main content</a>
-          </div>
-          <div class="header-branding">
-            <a href="https://gov.uk" title="Go to the GOV.UK homepage" class="header-logo">
-              <span>GOV.UK</span>
-            </a>
-          </div>
-          <a href="#proposition-links" class="header-menu-toggle"></a>
-          <div class="header-proposition">
-            {% block proposition %}{% endblock %}
-          </div>
-          <div class="header-bar"></div>
+      <div class="container">
+        <div class="skip-link">
+          <a href="#content">Skip to main content</a>
         </div>
+        <div class="header-branding">
+          <a href="https://gov.uk" title="Go to the GOV.UK homepage" class="header-logo">
+            <span>GOV.UK</span>
+          </a>
+        </div>
+        <a href="#proposition-links" class="header-menu-toggle"></a>
+        <div class="header-proposition">
+          {% block proposition %}{% endblock %}
+        </div>
+        <div class="header-bar"></div>
+      </div>
     </div>
 
     <div class="main-content" role="main">
@@ -66,8 +65,8 @@
       </div>
     </div>
 
-    <script src="{% static 'jquery/dist/jquery.js' %}"></script>
-    <script src="{% static 'javascripts/moj.js' %}"></script>
+    <script src="{{ static('jquery/dist/jquery.js') }}"></script>
+    <script src="{{ static('scripts/moj.js') }}"></script>
     {% block include_js %}{% endblock %}
   </body>
 </html>
