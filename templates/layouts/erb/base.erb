@@ -2,7 +2,13 @@
 <html lang="en" class="no-js">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title><%= (defined? yield_content) ? yield_content(:page_title) : yield(:page_title) %></title>
+    <title>
+      <% if content_for? :page_title %>
+        <%= (defined? yield_content) ? yield_content(:page_title) : yield(:page_title) %>
+      <% else %>
+        GOV.UK - The best place to find government services and information
+      <% end %>
+    </title>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
   </head>
