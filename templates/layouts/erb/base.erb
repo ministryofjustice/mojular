@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js <%= (defined? yield_content) ? yield_content(:template_type) : yield(:template_type) %>">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>
