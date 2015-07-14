@@ -19,11 +19,9 @@
         <div class="skip-link">
           <a href="#content">Skip to main content</a>
         </div>
-        <div class="header-branding">
-          <a href="https://gov.uk" title="Go to the GOV.UK homepage" class="header-logo">
-            <span>GOV.UK</span>
-          </a>
-        </div>
+        <% if content_for? :govuk_logo %>
+          <%= (defined? yield_content) ? yield_content(:govuk_logo) : yield(:govuk_logo) %>
+        <% end %>
         <% if content_for? :proposition %>
           <a href="#proposition-links" class="header-menu-toggle"></a>
           <div class="header-proposition">
