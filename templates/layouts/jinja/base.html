@@ -35,26 +35,28 @@
     <div class="global-footer">
       <div class="container">
         <div class="support-links">
-          <h2 class="u-vh">Support links</h2>
-          <ul>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/cookies">Cookies</a></li>
-            <li><a href="/feedback">Feedback</a></li>
-            <li>
-              Built by
-              <a href="https://mojdigital.blog.gov.uk/">
-                <abbr title="Ministry of Justice">MOJ</abbr> Digital Services
+          {% block support_links %}
+            <h2 class="u-vh">Support links</h2>
+            <ul>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/cookies">Cookies</a></li>
+              <li><a href="/feedback">Feedback</a></li>
+              <li>
+                Built by
+                <a href="https://mojdigital.blog.gov.uk/">
+                  <abbr title="Ministry of Justice">MOJ</abbr> Digital Services
+                </a>
+              </li>
+            </ul>
+            <div class="open-government-licence">
+              <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="ogl-logo">
+                Open Government Licence
               </a>
-            </li>
-          </ul>
-          <div class="open-government-licence">
-            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="ogl-logo">
-              Open Government Licence
-            </a>
-            All content is available under the
-            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>
-            except where otherwise stated
-          </div>
+              All content is available under the
+              <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>
+              except where otherwise stated
+            </div>
+          {% endblock %}
         </div>
         <div class="copyright">
           <a href="https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown copyright</a>
