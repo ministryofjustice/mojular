@@ -1,0 +1,28 @@
+{
+  "name": "mojular",
+  "version": "0.3.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ministryofjustice/mojular.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ministryofjustice/mojular/issues"
+  },
+  "homepage": "https://github.com/ministryofjustice/mojular#readme",
+  "devDependencies": {
+    "concat": "^1.0.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
