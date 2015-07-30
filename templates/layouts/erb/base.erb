@@ -31,18 +31,20 @@
       </div>
     </div>
 
+    <% if content_for? :global_subheader %>
+      <div class="global-subheader">
+        <div class="container">
+          <% if defined? yield_content %>
+            <%= yield_content :global_subheader %>
+          <% else %>
+            <%= yield :global_subheader %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
     <div class="main-content" role="main">
       <div class="container">
-        <% if content_for? :global_subheader %>
-          <div class="global-subheader">
-            <% if defined? yield_content %>
-              <%= yield_content :global_subheader %>
-            <% else %>
-              <%= yield :global_subheader %>
-            <% end %>
-          </div>
-        <% end %>
-
         <%= yield %>
       </div>
     </div>
