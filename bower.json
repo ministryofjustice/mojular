@@ -1,6 +1,6 @@
 {
   "name": "mojular",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "authors": [
     "Tyom Semonov <inspiro@gmail.com>"
   ],
@@ -14,6 +14,6 @@
     "tests"
   ],
   "dependencies": {
-    "govuk-template": "ministryofjustice/govuk-template"
+    "govuk-template": "ministryofjustice/govuk-template#0.3.0"
   }
 }
