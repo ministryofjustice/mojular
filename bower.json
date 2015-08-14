@@ -1,8 +1,9 @@
 {
   "name": "mojular",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "authors": [
-    "Tyom Semonov <inspiro@gmail.com>"
+    "Tyom Semonov <inspiro@gmail.com>",
+    "Dom Smith <teneightfive.com>"
   ],
   "license": "MIT",
   "private": true,
