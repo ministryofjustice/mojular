@@ -12,6 +12,9 @@
     <script>(function(d){d.className=d.className.replace(/\bno-js\b/,'js-enabled')})(document.documentElement);</script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'scripts/ie.min.js' %>
+    <![endif]-->
   </head>
   <body>
     <div class="global-header">
