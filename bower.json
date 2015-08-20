@@ -14,6 +14,7 @@
     "test",
     "tests"
   ],
+  "main": [],
   "dependencies": {
     "govuk-template": "ministryofjustice/govuk-template#0.4.1",
     "html5shiv": "~3.7.3",
