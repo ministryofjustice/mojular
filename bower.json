@@ -1,6 +1,6 @@
 {
   "name": "mojular",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "authors": [
     "Tyom Semonov <inspiro@gmail.com>",
     "Dom Smith <teneightfive.com>"
@@ -16,7 +16,7 @@
   ],
   "main": [],
   "dependencies": {
-    "govuk-template": "ministryofjustice/govuk-template#0.4.1",
+    "govuk-template": "ministryofjustice/govuk-template#0.4.2",
     "html5shiv": "~3.7.3",
     "json2": "*"
   }
