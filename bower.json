@@ -7,6 +7,10 @@
   ],
   "license": "MIT",
   "private": true,
+  "main": [
+    "assets/scripts/moj.js",
+    "assets/scss/_moj.scss"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
