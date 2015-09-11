@@ -91,7 +91,7 @@
       </div>
     </div>
 
-    <%= javascript_include_tag 'jquery/dist/jquery', 'scripts/moj' %>
+    <%= javascript_include_tag 'scripts/libs.min', 'scripts/moj-sprockets' %>
     <% if content_for? :include_js %>
       <% if defined? yield_content %>
         <%= javascript_include_tag(yield_content :include_js) %>
