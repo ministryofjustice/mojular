@@ -20,10 +20,13 @@
   ],
   "main": [],
   "dependencies": {
-    "govuk-template": "ministryofjustice/govuk-template#0.4.4",
+    "govuk-template": "ministryofjustice/govuk-template#npm",
     "html5shiv": "~3.7.3",
     "json2": "*",
     "jquery": "1.11.1",
     "lodash": "~3.10.1"
-  }
+  },
+  "importPaths": [
+    "mojular/assets/scss"
+  ]
 }
