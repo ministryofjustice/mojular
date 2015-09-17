@@ -14,13 +14,6 @@ module Mojular
 
     def configure_sass
       require 'sass'
-
-      # ::Sass.load_paths << stylesheets_path
-
-      p 'CONFIGURING SASS...'
-
-      # bootstrap requires minimum precision of 8, see https://github.com/twbs/bootstrap-sass/issues/409
-      # ::Sass::Script::Number.precision = [8, ::Sass::Script::Number.precision].max
     end
 
     def register_rails_engine
@@ -28,10 +21,7 @@ module Mojular
     end
 
     def register_sprockets
-      p 'REGISTERING SPROCKETS'
-      # Sprockets.append_path(stylesheets_path)
-      # Sprockets.append_path(fonts_path)
-      # Sprockets.append_path(javascripts_path)
+      # Append assets paths
     end
   end
 end
